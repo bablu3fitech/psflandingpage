@@ -1542,6 +1542,7 @@ a:focus {
  COMMON AREA CSS
 ::::::::::::::::::::::::::
 */
+
 .white-heading .sub-title {
   color: var(--vtc-text-white);
   font-size: var(--f-fs-font-18);
@@ -1576,7 +1577,7 @@ a:focus {
   }
 }
 .white-heading p {
-  color: var(--vtc-text-white80per);
+  /* color: var(--vtc-text-white80per); */
   font-size: var(--f-fs-font-18);
   font-style: normal;
   font-weight: var(--f-fw-medium);
@@ -1584,22 +1585,22 @@ a:focus {
   text-transform: capitalize;
 }
 .white-heading h5 {
-  color: var(--vtc-text-white);
+  /* color: var(--vtc-text-white); */
   font-size: var(--f-fs-font-32);
   font-style: normal;
   font-weight: var(--f-fw-semibold);
   line-height: var(--f-fs-font-38); /* 118.75% */
 }
 .white-heading h3 {
-  color: var(--vtc-text-white);
+  /* color: var(--vtc-text-white); */
   font-size: var(--f-fs-font-52);
   font-style: normal;
   font-weight: var(--f-fw-semibold);
   line-height: var(--f-fs-font-52); /* 118.75% */
-}
+} 
 
 .heading1 .sub-title {
-  color: var(--vtc-text-title1);
+  /* color: var(--vtc-text-title1); */
   font-size: var(--f-fs-font-18);
   font-style: normal;
   font-weight: var(--f-fw-medium);
