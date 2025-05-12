@@ -1178,7 +1178,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
          </script>
          
       <!-- PopUp -->
-    <center>
+ <center>
   <div class="vl-popup-wrapper" id="popupWrapper">
     <div class="vl-popup-overlay" onclick="closePopup()"></div>
     <div class="vl-popup-content" data-aos="zoom-in" data-aos-duration="500">
@@ -1195,14 +1195,14 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       
       <form id="enquiryForm" class="vl-popup-form">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 col-12">
             <div class="vl-form-group">
               <input type="text" name="fullname" required class="vl-form-control" />
               <label>Full Name</label>
               <span class="vl-focus-border"></span>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-12">
             <div class="vl-form-group">
               <input type="email" name="email" required class="vl-form-control" />
               <label>Email Address</label>
@@ -1212,14 +1212,14 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         </div>
         
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 col-12">
             <div class="vl-form-group">
               <input type="tel" name="phone" required class="vl-form-control" placeholder=" " oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10);" />
               <label>Contact Number</label>
               <span class="vl-focus-border"></span>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-12">
             <div class="vl-form-group">
               <select name="service" required class="vl-form-control vl-select-control">
                 <option value=""> --Choose-- </option>
@@ -1291,14 +1291,16 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   box-shadow: 0 15px 50px rgba(0,0,0,0.2);
   z-index: 10;
   margin: 20px;
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
 .vl-popup-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1315,17 +1317,18 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
 .vl-popup-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .vl-popup-header h2 {
   font-size: 28px;
   margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .vl-form-group {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .vl-form-control {
@@ -1337,22 +1340,18 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   transition: all 0.3s;
   background: transparent;
   z-index: 1;
-  height: 52px; /* Fixed height for all inputs */
-  box-sizing: border-box; /* Include padding in height calculation */
+  height: 52px;
+  box-sizing: border-box;
 }
 
 .vl-select-control {
   appearance: none;
- /* background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); */
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  background-size: 14px;
 }
 
 .vl-textarea-control {
-  height: auto; /* Allow textarea to have flexible height */
-  min-height: 120px; /* Minimum height for textarea */
-  resize: vertical; /* Allow vertical resizing */
+  height: auto;
+  min-height: 120px;
+  resize: vertical;
 }
 
 .vl-form-control:focus {
@@ -1401,13 +1400,77 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   font-size: 14px;
 }
 
+/* Mobile Responsive Styles */
 @media (max-width: 767px) {
   .vl-popup-content {
-    padding: 30px 20px;
+    padding: 25px 15px;
+    margin: 10px;
+    max-height: 95vh;
   }
   
   .vl-popup-header h2 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .vl-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .vl-form-control {
+    padding: 12px 15px;
+    height: 48px;
+    font-size: 14px;
+  }
+  
+  .vl-textarea-control {
+    min-height: 100px;
+  }
+  
+  .vl-form-group label {
+    top: 12px;
+    left: 15px;
+    font-size: 14px;
+  }
+  
+  .vl-form-control:focus + label,
+  .vl-form-control:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 11px;
+  }
+  
+  .vl-popup-close {
+    top: 10px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+  }
+  
+  button.theme-btn17 {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .vl-popup-content {
+    padding: 20px 12px;
+  }
+  
+  .vl-popup-header h2 {
+    font-size: 20px;
+  }
+  
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .col-12 {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 </style>
